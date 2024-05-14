@@ -98,7 +98,7 @@ python web_admin.py
 ```
 
 #### With Docker
-Our docker image [levywang/ftp-wecb-client:latest](https://hub.docker.com/r/levywang/ftp-wecb-client) is based on the latest python image.
+Our docker image [levywang/ftp-wecb-client:latest](https://hub.docker.com/r/levywang/ftp-web-client) is based on the latest python image.
 
 ##### Note
 1. Please bind the local user directory (or other) to the container before use. The default container directory is `/data`.
