@@ -1,0 +1,23 @@
+{
+    "auth_mode": "local",
+    "local_users": "{'admin': '123456'}",
+    "admin_users": "['admin']",
+    "ldap": {
+        "server": "ldap://example.com:389",
+        "dn": "CN=test,DC=example,DC=com",
+        "password": "123456",
+        "search_base": "OU=Users,DC=example,DC=com"
+    },
+    "ldap3": {
+        "server": "<your_server_address>",
+        "port": 389,
+        "domain": "example.com",
+        "password": "Xepic2021."
+    },
+    "download_path": "/data",
+    "log": {
+        "user_log": "/var/log/ftp-web-client/user.log",
+        "runtime_log": "/var/log/ftp-web-client/runtime.log",
+        "error_log": "/var/log/ftp-web-client/error.log"
+    }
+}

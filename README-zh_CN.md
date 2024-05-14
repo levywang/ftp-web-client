@@ -4,9 +4,9 @@
 
 # FTP Web Client 
 
-`Ftp Web Client` is the web layer implementation of FTP, providing authentication based on Microsoft AD and web-based download functionality bound to FTP user directories. developed by [levywang](https://github.com/levywang/).
+`Ftp Web Client`是 FTP 的 Web 层实现，提供基于 Microsoft AD 的身份验证以及绑定到 FTP 用户目录的基于 Web 的下载功能。 开发者： [levywang](https://github.com/levywang/).
 
-![xmind](./docs/xmind_en.png)
+![xmind](./docs/xmind_cn.png)
 
 [![GitHub license](https://img.shields.io/github/license/levywang/ftp-web-client?label=License&logo=github)](https://github.com/levywang/ftp-web-client "Click to view the repo on Github")
 [![Release Version](https://img.shields.io/github/release/levywang/ftp-web-client?include_prereleases&label=Release&logo=github)](https://github.com/levywang/ftp-web-client/releases/latest "Click to view the repo on Github")
@@ -20,7 +20,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/levywang/ftp-web-client?label=Pulls&logo=docker)](https://hub.docker.com/r/levywang/ftp-web-client "Click to view the image on Docker Hub")
 [![Image Size](https://img.shields.io/docker/image-size/levywang/ftp-web-client/latest?label=Image%20Size&logo=docker)](https://hub.docker.com/r/levywang/ftp-web-client "Click to view the image on Docker Hub")
 
-## Stargazers over time
+## Start 趋势
 
 [![Stargazers over time](https://starchart.cc/levywang/ftp-web-client.svg)](https://starchart.cc/levywang/ftp-web-client)
 
@@ -34,45 +34,46 @@ URL：[http://ftp.wwlww.org](http://ftp.wwlww.org)
 - Username：admin
 - Password：123456
 
-### Features
+### 主要功能
 
-- Complete login functionality, supporting local authentication using python-ldap3 and python-ldap libraries.
-- Provides user download functionality, defaulting to binding user directories, with options to bind to Linux home directories or FTP directories, and the flexibility to set other directories as well.
-- Backend administrative features include comprehensive configuration management, log management, and a control panel.
+- 完整的登录功能，支持使用 python-ldap3、python-ldap 库以及本地身份验证。
+- 提供用户下载功能，默认绑定用户目录，可以选择绑定Linux主目录或FTP目录，也可以灵活设置其他目录。
+- 后端管理功能包括全面的配置管理、日志管理和控制面板。
 
 ### Todo list
 
-- [ ] SSH Protocol Authentication
-- [ ] FTP Protocol Authentication
-- [ ] Upload function
-- [ ] Multi-language support
+- [ ] SSH 协议认证
+- [ ] FTP 协议认证
+- [ ] 上传功能
+- [ ] 多语言支持
 
-### Internationalization
+### 国际化
 
 - English
 
-We welcome translations into any language.
-
-## Getting Started
-
-### Before Use
-
-Before using this item, you need to modify the web_admin.py and config.json files according to the actual situation.
-
-If you need to modify the running port, it is in the last line of web_admin.py. 
-
-By default, port 8080 is used.
-
-The default value of `<config_bind_data_dir>` is `/data`
-
-`<your_local_dir>` can set the ftp binding directory or `/home`
+我们欢迎翻译成任何语言。
 
 
-When your service is running, Log in to web panel with `http://<your_server_ip>:8080`.
+## 入门
 
-### Installation
+### 使用前
 
-ftp-web-client is available on the following platforms:
+使用此项目之前，需要根据实际情况修改 `web_admin.py` 和 `config.json` 文件。
+
+如果需要修改运行端口，在 `web_admin.py` 的最后一行。
+
+默认情况下，使用端口 8080。
+
+`<config_bind_data_dir>` 的默认值为 `/data`
+
+`<your_local_dir>` 可以设置 ftp 绑定目录或 `/home`
+
+
+当您的服务运行时，使用 `http://<your_server_ip>:8080` 登录到 Web 面板。
+
+### 安装
+
+ftp-web-client 可在以下平台上使用：
 
 - macOS 11 Big Sur and later (amd64 / arm64)
 - Linux 2.6.23 and later (x86 / amd64 / arm64 / armv5 / armv6 / armv7)
@@ -82,12 +83,11 @@ ftp-web-client is available on the following platforms:
 - Dragonfly BSD
 - Openwrt
 
-### Usage
+### 使用方法
 
-In the first runtime of the project, you need to edit the `config.json` file in the root directory of the project.
+项目第一次运行时，需要编辑项目根目录下的 `config.json` 文件。
 
-#### From Executable
-**Run Project in Terminal**
+#### 命令行运行
 
 ```bash
 
@@ -97,19 +97,19 @@ pip install -r requirements.txt
 python web_admin.py
 ```
 
-#### With Docker
-Our docker image [levywang/ftp-wecb-client:latest](https://hub.docker.com/r/levywang/ftp-wecb-client) is based on the latest python image.
+#### Docker
+我们的 docker 镜像 [levywang/ftp-web-client:latest](https://hub.docker.com/r/levywang/ftp-web-client) 基于最新的 python 镜像。
 
-##### Note
-1. Please bind the local user directory (or other) to the container before use. The default container directory is `/data`.
-2. If you want to host static files, you can map directories to container.
+##### 注意
+1. 使用前请绑定本地用户目录（或者其他）到容器中，默认容器目录是 `/data`。
+2. 如果要托管静态文件，可以将目录映射到容器。
 
 <details>
 <summary><b>Deploy with Docker</b></summary>
 
-1. [Install Docker.](https://docs.docker.com/install/)
+1. [安装 Docker.](https://docs.docker.com/install/)
 
-2. Then deploy ftp-web-client like this:
+2. 然后运行 Docker 容器:
 
 ```bash
 docker run -dit \
@@ -121,7 +121,7 @@ docker run -dit \
   levywang/ftp-web-client:latest
 ```
 
-3. When your docker container is running, Log in to web panel with `http://<your_server_ip>:8080`.
+3. 当您的 docker 容器运行时，使用以下 url 登录到 Web 面板 `http://<your_server_ip>:8080`.
 </details>
 
 <details>
@@ -129,7 +129,7 @@ docker run -dit \
 
 1. [Install Docker-Compose.](https://docs.docker.com/compose/install/)
 
-2. Create a docker-compose.yml file like this:
+2. 创建一个 docker-compose.yml 文件，内容如下:
 
 ```yml
 version: '3.3'
@@ -148,21 +148,20 @@ services:
         image: 'levywang/ftp-web-client:latest'
 ```
 
-3. Then creat your container by:
+3. 使用下面命令运行容器:
 
 ```bash
 docker-compose up -d
 ```
 
 ```bash
-# If using docker-compose-plugin
+# 如果使用的是 docker 原生 compose 插件
 docker compose up -d
 ```
 
-4. When your docker container is running, Log in to web panel with `http://<your_server_ip>:8080`.
+4. 当您的 docker 容器运行时，使用以下 url 登录到 Web 面板 `http://<your_server_ip>:8080`.
 
 </details>
-
 
 <details>
 <summary><b>Build Local Dockerfile</b></summary>
@@ -175,7 +174,6 @@ docker build -t <tag>:<version> .
 docker run -d --name <container_name> -v <your_path>:<container_path> -p <your_port>:8080 <tag>:<version>
 ```
 </details>
-
 
 ## License
 This project is provided under a GNU Affero General Public License v3.0 license that can be found in the [LICENSE](LICENSE) file. By using, distributing, or contributing to this project, you agree to the terms and conditions of this license.
