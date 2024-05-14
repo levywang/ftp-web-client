@@ -20,7 +20,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/levywang/ftp-web-client?label=Pulls&logo=docker)](https://hub.docker.com/r/levywang/ftp-web-client "Click to view the image on Docker Hub")
 [![Image Size](https://img.shields.io/docker/image-size/levywang/ftp-web-client/latest?label=Image%20Size&logo=docker)](https://hub.docker.com/r/levywang/ftp-web-client "Click to view the image on Docker Hub")
 
-## Start 趋势
+## Star 趋势
 
 [![Stargazers over time](https://starchart.cc/levywang/ftp-web-client.svg)](https://starchart.cc/levywang/ftp-web-client)
 
