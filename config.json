@@ -12,7 +12,7 @@
         "server": "<your_server_address>",
         "port": 389,
         "domain": "example.com",
-        "password": "Xepic2021."
+        "password": "123456"
     },
     "download_path": "/data",
     "log": {
